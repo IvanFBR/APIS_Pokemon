@@ -53,4 +53,9 @@ export class ListaPokemonesComponent implements OnInit {
     return !!value;
   }
 
+  verDetalles(pokemon: any): void {
+    const id = pokemon.url.split('/').filter(this.filterFalsy).pop();
+    this.router.navigate(['/detalle-pokemon', id]);
+  }
+
 }
