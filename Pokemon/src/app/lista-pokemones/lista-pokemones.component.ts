@@ -62,4 +62,9 @@ export class ListaPokemonesComponent implements OnInit {
     this.router.navigate(['/detalle-pokemon', id], { queryParams: { page: this.pagina } });
   }
 
+  VolverMenu(){
+    this.router.navigate(['/home']);
+
+  }
+
 }
