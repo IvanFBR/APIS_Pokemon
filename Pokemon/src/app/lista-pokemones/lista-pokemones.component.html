@@ -9,7 +9,7 @@
 
   <div *ngIf="!cargando" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
     <div *ngFor="let pokemon of pokemon" class="col" (click)="verDetalles(pokemon)">
-      <div class="card h-100 text-center shadow-lg rounded">
+      <div class="card h-100 text-center shadow-lg rounded" style="background-color: #b0b0b0;">     
         <img 
           [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + 
                   pokemon.url.split('/').filter(this.filterFalsy).pop() + '.png'" 
@@ -18,7 +18,7 @@
           style="max-height: 150px; object-fit: contain;"
         >
         <div class="card-body">
-          <h5 class="card-title text-warning">{{ obtenerPokemonNombre(pokemon) | titlecase }}</h5>
+          <h5 class="card-title" style="color: #4CAF50;">{{ obtenerPokemonNombre(pokemon) | titlecase }}</h5>
         </div>
       </div>
     </div>
