@@ -1,0 +1,67 @@
+
+
+h1.text-warning {
+    color: #ffcc00; 
+    font-family: 'Roboto', sans-serif; 
+    font-size: 3rem;  
+    font-weight: bold; 
+    letter-spacing: 2px;  
+    margin-bottom: 30px;  
+  }
+  
+  .card-title {
+    color: #ffcc00; 
+  }
+  
+  .btn-pagination {
+    background-color: #ff9900; 
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-pagination:hover {
+    background-color: #ffcc00; 
+    transform: scale(1.05);
+  }
+  
+  .btn-pagination:disabled {
+    background-color: #ccc;
+    color: #666;
+  }
+
+  
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .container > h1 {
+      font-size: 2rem;
+    }
+  
+    .btn-pagination {
+      font-size: 1rem;
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 5px;
+    }
+  
+    .container > h1 {
+      font-size: 1.5rem;
+    }
+  
+    .btn-pagination {
+      font-size: 0.9rem;
+      padding: 6px 12px;
+    }
+  }
+  
