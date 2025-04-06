@@ -1,1 +1,61 @@
-<p>detalle-pokemon works!</p>
+<div class="container my-4" *ngIf="!cargando && pokemon">
+  <button class="btn btn-outline-primary mb-4" (click)="VolverLista()">← Back to the list</button>
+  
+  <div class="text-center mb-4">
+    <h1 class="display-4 text-uppercase" style="color: #ffcc00;">{{ pokemon.name | titlecase }}</h1>
+    <span class="text-muted" style="color: #ffcc00;">#{{ pokemon.id }}</span>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-lg">
+        <img [src]="pokemon.sprites.other['official-artwork'].front_default" 
+             [alt]="pokemon.name" 
+             class="card-img-top">
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="card shadow-lg">
+        <div class="card-body">
+          <div class="mb-3">
+            <h4 class="card-title" style="color: #ffcc00;">Types</h4>
+            <div class="d-flex flex-wrap">
+              <span *ngFor="let type of pokemon.types" class="badge rounded-pill me-2 mb-2" 
+                    [ngClass]="'bg-' + type.type.name" 
+                    [style.background-color]="'#dc3545'" 
+                    style="font-size: 1.2rem; padding: 8px 12px; color: white;">
+                {{ type.type.name | titlecase }}
+              </span>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h4 class="card-title" style="color: #ffcc00;">Statistics</h4>
+            <div class="list-group">
+              <div *ngFor="let stat of pokemon.stats" class="list-group-item d-flex justify-content-between">
+                <span>{{ stat.stat.name | titlecase }}</span>
+                <span>{{ stat.base_stat }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h4 class="card-title" style="color: #ffcc00;">Abilities</h4>
+            <div>
+              <span *ngFor="let ability of pokemon.abilities" class="badge rounded-pill bg-success me-2">
+                {{ ability.ability.name | titlecase }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="cargando" class="text-center">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>

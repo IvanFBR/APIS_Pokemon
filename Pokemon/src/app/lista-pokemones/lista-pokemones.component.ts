@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonService } from '../services/pokemon.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 
@@ -18,9 +18,13 @@ export class ListaPokemonesComponent implements OnInit {
   limit: number = 20;
   cargando: boolean = true;
 
-  constructor(private pokemonService: PokemonService, private router: Router) {}
+  constructor(private pokemonService: PokemonService, private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit() {
+    const page = this.route.snapshot.queryParamMap.get('page');
+    if (page) {
+      this.pagina = +page;
+    }
     this.cargarPokemones();
   }
 
@@ -55,7 +59,7 @@ export class ListaPokemonesComponent implements OnInit {
 
   verDetalles(pokemon: any): void {
     const id = pokemon.url.split('/').filter(this.filterFalsy).pop();
-    this.router.navigate(['/detalle-pokemon', id]);
+    this.router.navigate(['/detalle-pokemon', id], { queryParams: { page: this.pagina } });
   }
 
 }
