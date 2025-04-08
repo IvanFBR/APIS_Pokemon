@@ -2,10 +2,16 @@
 
 ### 📚₊˚✩ Description
  
-This project was built using Angular 19 and integrates a Pokémon API to retrieve data, images, and detailed information about each Pokémon, including their types, stats, abilities, and more.
-_______
-
+In this project, we proudly present my very own Pokémon web page!
+You'll be able to browse Pokémon by their official number, view their name, and—if you're curious—explore detailed information about each one!
+ 
+### 🌱₊˚✩ Explication
+__
+- #### Home Screen
+- 
 The project begins with the creation of a home component. In the HTML section of this component, a welcoming interface is designed featuring the Pokémon logo, a Pikachu-themed background, and a button. When clicked, this button navigates the user to the lista-pokemones (Pokémon list) component.
+
+![image](https://github.com/user-attachments/assets/d313ccfe-3f87-40b8-ae58-8b2d8a2eba75)
 
 In this list component, the same background is maintained, but instead of the welcome screen, a page filled with Pokémon cards is displayed. These cards are built using Bootstrap, and each includes a Pokémon image (sourced from a game) along with the corresponding name. At the bottom of the page, there are two navigation buttons: "Previous" and "Next". These buttons allow users to move through the pages. Clicking "Next" loads the next 20 Pokémon from the API, updating their names and images, while "Previous" goes back to the previous 20 Pokémon.
 
