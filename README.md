@@ -3,7 +3,7 @@
 ### 📚₊˚✩ Description
  ___
 In this project, we proudly present my very own Pokémon web page!
-You'll be able to browse Pokémon by their official number, view their name, and—if you're curious—explore detailed information about each one!
+You'll be able to browse Pokémon by their official number, view their name, and if you're curious explore detailed information about each one!
  
 ### 🌱₊˚✩ Explication
 ____
