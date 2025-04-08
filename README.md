@@ -23,7 +23,7 @@ Between these two buttons, a dynamic text display shows the current page number.
 ![image](https://github.com/user-attachments/assets/f412b047-1939-4945-8e53-31034a3d5056)
 ![image](https://github.com/user-attachments/assets/639a8957-d764-4a94-b60f-702da524ecf5)
 
-#### 📙*·.༄࿔ Pokémon details*
+#### ✏️*·.༄࿔ Pokémon details*
 
 When a user clicks on any Pokémon card, they are directed to the detalle-pokemon (Pokémon detail) component. This component displays a well-organized table (styled with Bootstrap) that presents detailed information about the selected Pokémon, such as its name, type(s), stats, moves, and an animated image using animate.css. Within this component, there is also a button that redirects back to the Pokémon list. The page number from which the Pokémon was selected is preserved, so the user returns to the same page they were on.
 
