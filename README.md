@@ -1,13 +1,13 @@
 # APIS_Pokemon
 
 ### 📚₊˚✩ Description
- 
+ ___
 In this project, we proudly present my very own Pokémon web page!
 You'll be able to browse Pokémon by their official number, view their name, and—if you're curious—explore detailed information about each one!
  
 ### 🌱₊˚✩ Explication
-__
-- #### Home Screen
+___
+Home Screen
 - 
 The project begins with the creation of a home component. In the HTML section of this component, a welcoming interface is designed featuring the Pokémon logo, a Pikachu-themed background, and a button. When clicked, this button navigates the user to the lista-pokemones (Pokémon list) component.
 
