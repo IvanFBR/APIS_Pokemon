@@ -1,6 +1,9 @@
 # APIS_Pokemon
+
+### 📚₊˚✩ Description
  
 This project was built using Angular 19 and integrates a Pokémon API to retrieve data, images, and detailed information about each Pokémon, including their types, stats, abilities, and more.
+_______
 
 The project begins with the creation of a home component. In the HTML section of this component, a welcoming interface is designed featuring the Pokémon logo, a Pikachu-themed background, and a button. When clicked, this button navigates the user to the lista-pokemones (Pokémon list) component.
 
