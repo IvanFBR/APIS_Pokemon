@@ -19,9 +19,8 @@ In this list component, the same background is maintained, but instead of the we
 
 Between these two buttons, a dynamic text display shows the current page number. As users navigate forward or backward, the counter updates accordingly and also displays the total number of available pages. Lastly, there's a button that redirects the user back to the home component, where the welcome screen is shown again, along with background Pokémon music.
 
-![image](https://github.com/user-attachments/assets/4dcce83f-b390-463c-ace9-58177d185994)
-![image](https://github.com/user-attachments/assets/f412b047-1939-4945-8e53-31034a3d5056)
-![image](https://github.com/user-attachments/assets/639a8957-d764-4a94-b60f-702da524ecf5)
+![image](https://github.com/user-attachments/assets/c9f516e3-88ea-4d9b-9226-1e6a39a783b7)
+![image](https://github.com/user-attachments/assets/ee38131b-b6d7-458a-8f90-78b23b42c400)
 
 #### ✏️*·.༄࿔ Pokémon details*
 
