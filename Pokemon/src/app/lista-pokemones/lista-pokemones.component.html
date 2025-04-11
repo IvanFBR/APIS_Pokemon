@@ -1,50 +1,47 @@
-<div class="container my-4" *ngIf="!cargando && pokemon">
-  <button class="btn btn-outline-warning mb-4" (click)="VolverMenu()">← Back to the Menu</button>
-  
-  <div class="text-center mb-4">
+<div class="container" *ngIf="!cargando && pokemon">
+  <!-- Navbar -->
+  <div class="navigation-bar">
+    <div class="nav-button">
+      <button 
+        class="arrow arrow-left" 
+        [ngClass]="{ 'click-animation': animando }"
+        (click)="cambiarPagina(pagina - 1)" 
+        [disabled]="pagina === 1"
+      >
+        <img src="../../assets/images/left.png" alt="Prev">
+      </button>
+    </div>
 
-<div class="container py-4">
-  <h1 class="text-center mb-4 text-warning">Available Pokémon</h1>
+    <div class="spacer"></div>
 
-  <div *ngIf="cargando" class="text-center">
-    <div class="spinner-border text-primary" role="status">
-      <span class="visually-hidden">Loading...</span>
+    <div class="title-container">
+      <div class="title tipo-font"> BOX {{ pagina }}</div>    </div>
+
+    <div class="spacer"></div>
+
+    <div class="nav-button">
+      <button 
+        class="arrow arrow-right" 
+        (click)="cambiarPagina(pagina + 1)" 
+        [disabled]="pagina * limit >= totalPokemones"
+      >
+        <img src="../../assets/images/right.png" alt="Next">
+      </button>
     </div>
   </div>
 
-  <div *ngIf="!cargando" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-    <div *ngFor="let pokemon of pokemon" class="col" (click)="verDetalles(pokemon)">
-      <div class="card h-100 text-center shadow-lg rounded" style="background-color: #b0b0b0;">     
-        <img 
-          [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + 
-                  pokemon.url.split('/').filter(this.filterFalsy).pop() + '.png'" 
-          [alt]="pokemon.name" 
-          class="card-img-top p-3" 
-          style="max-height: 150px; object-fit: contain;"
-        >
-        <div class="card-body">
-          <h5 class="card-title" style="color: #4CAF50;">{{ obtenerPokemonNombre(pokemon) | titlecase }}</h5>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div *ngIf="!cargando" class="d-flex justify-content-center align-items-center mt-4 gap-3">
-    <button 
-      class="btn btn-pagination" 
-      (click)="cambiarPagina(pagina - 1)" 
-      [disabled]="pagina === 1">
-      ← Previous
-    </button>
-
-    <span class="fw-bold text-white">Page {{ pagina }} / {{ totalPaginas }}</span>
-
-    <button 
-      class="btn btn-pagination" 
-      (click)="cambiarPagina(pagina + 1)" 
-      [disabled]="pagina * 20 >= totalPokemones"
+  <!-- Pokemon  -->
+  <div class="grid">
+    <div 
+      class="cell" 
+      *ngFor="let poke of pokemon" 
+      (click)="verDetalles(poke)"
     >
-      Next →
-    </button>
+      <img 
+        [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + obtenerIdDesdeUrl(poke) + '.png'" 
+        [alt]="poke.name"
+        class="poke-img"
+      >
+    </div>
   </div>
 </div>

@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-lista-pokemones',
-  imports: [CommonModule, HttpClientModule],
+  imports: [CommonModule],
   templateUrl: './lista-pokemones.component.html',
   styleUrls: ['./lista-pokemones.component.css']
 })
@@ -48,6 +48,10 @@ export class ListaPokemonesComponent implements OnInit {
       .join(' ');
   }
 
+  obtenerIdDesdeUrl(pokemon: any): string {
+    return pokemon.url.split('/').filter(this.filterFalsy).pop();
+  }
+
   cambiarPagina(pagina: number): void {
     this.pagina = pagina;
     this.cargarPokemones();
@@ -66,5 +70,7 @@ export class ListaPokemonesComponent implements OnInit {
     this.router.navigate(['/home']);
 
   }
+
+  animando=false;
 
 }
