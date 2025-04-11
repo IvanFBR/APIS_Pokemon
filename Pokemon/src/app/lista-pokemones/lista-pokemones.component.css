@@ -5,6 +5,21 @@
   font-style: normal;
 }
 
+.menu-btn {
+  all: unset; 
+  background-image: url('../../assets/images/pokemon_arrow.png');
+  background-size: contain; 
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -35,6 +50,7 @@ body {
   padding: 20px;
   border-radius: 25px;
   box-sizing: border-box;
+  margin-top: 15px
 }
 
 .navigation-bar {

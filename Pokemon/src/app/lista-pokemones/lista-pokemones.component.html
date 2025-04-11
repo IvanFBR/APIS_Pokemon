@@ -1,3 +1,8 @@
+<!-- Botón de menú -->
+<div class="menu-button">
+  <button class="menu-btn tipo-font" (click)="VolverMenu()"></button>
+</div>
+
 <div class="container" *ngIf="!cargando && pokemon">
   <!-- Navbar -->
   <div class="navigation-bar">
@@ -11,14 +16,15 @@
         <img src="../../assets/images/left.png" alt="Prev">
       </button>
     </div>
-
+    
     <div class="spacer"></div>
-
+    
     <div class="title-container">
-      <div class="title tipo-font"> BOX {{ pagina }}</div>    </div>
-
+      <div class="title tipo-font"> BOX {{ pagina }}</div>
+    </div>
+    
     <div class="spacer"></div>
-
+    
     <div class="nav-button">
       <button 
         class="arrow arrow-right" 
