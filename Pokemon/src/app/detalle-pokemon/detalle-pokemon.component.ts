@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   styleUrl: './detalle-pokemon.component.css'
 })
 export class DetallePokemonComponent {
-  pokemon: any
+  pokemon: any = {};
   cargando = true;
 
   constructor(private route: ActivatedRoute, private pokemonService : PokemonService, private router: Router){}
