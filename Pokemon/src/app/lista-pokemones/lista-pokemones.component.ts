@@ -38,6 +38,13 @@ export class ListaPokemonesComponent implements OnInit {
       this.totalPaginas = Math.ceil(this.totalPokemones / this.limit);
       this.cargando = false;
     });
+
+    this.cargando = false;
+
+    setTimeout(() => {
+      this.animandoContenido = false;
+      this.animando = false;
+    }, 100);
   }
 
   obtenerPokemonNombre(pokemon: any): string {
@@ -53,24 +60,42 @@ export class ListaPokemonesComponent implements OnInit {
   }
 
   cambiarPagina(pagina: number): void {
-    this.pagina = pagina;
-    this.cargarPokemones();
+    if (pagina < 1 || pagina > this.totalPaginas) return;
+  
+    this.animandoContenido = true;
+    this.animando = true; 
+  
+    setTimeout(() => {
+      this.pagina = pagina;
+      this.cargarPokemones();
+    }, 400);
   }
+  
+  
 
   filterFalsy(value: any): boolean {
     return !!value;
   }
 
-  verDetalles(pokemon: any): void {
-    const id = pokemon.url.split('/').filter(this.filterFalsy).pop();
-    this.router.navigate(['/detalle-pokemon', id], { queryParams: { page: this.pagina } });
+  indexSeleccionado: number | null = null;
+
+  verDetalles(pokemon: any, index: number): void {
+    this.indexSeleccionado = index;
+  
+    setTimeout(() => {
+      const id = pokemon.url.split('/').filter(this.filterFalsy).pop();
+      this.router.navigate(['/detalle-pokemon', id], { queryParams: { page: this.pagina } });
+    }, 300);
   }
+  
 
   VolverMenu(){
     this.router.navigate(['/home']);
 
   }
 
+  
+  animandoContenido = false;
   animando=false;
 
 }

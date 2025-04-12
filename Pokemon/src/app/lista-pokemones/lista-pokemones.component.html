@@ -26,6 +26,7 @@
     <div class="nav-button">
       <button 
         class="arrow arrow-right" 
+        [ngClass]="{ 'click-animation': animando }"
         (click)="cambiarPagina(pagina + 1)" 
         [disabled]="pagina * limit >= totalPokemones"
       >
@@ -34,17 +35,21 @@
     </div>
   </div>
 
-  <div class="grid">
+  <div 
+    class="grid fade-container" 
+    [class.fade-out]="animandoContenido"
+  >
     <div 
-      class="cell" 
-      *ngFor="let poke of pokemon" 
-      (click)="verDetalles(poke)"
-    >
-      <img 
-        [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + obtenerIdDesdeUrl(poke) + '.png'" 
-        [alt]="poke.name"
-        class="poke-img"
-      >
+    class="cell" 
+    *ngFor="let poke of pokemon; let i = index" 
+    [ngClass]="{ 'animating': indexSeleccionado === i }"
+    (click)="verDetalles(poke, i)"
+  >
+  <img 
+    [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + obtenerIdDesdeUrl(poke) + '.png'" 
+    [alt]="poke.name"
+    class="poke-img"
+  >
     </div>
   </div>
 </div>

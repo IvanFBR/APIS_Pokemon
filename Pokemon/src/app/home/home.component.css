@@ -1,3 +1,11 @@
+:host {
+  background: url('../../assets/images/home-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;  /* Asegúrate de que ocupe toda la altura de la pantalla */
+  width: 100%;    /* Asegúrate de que ocupe todo el ancho */
+  display: block; /* Para evitar que el contenido se "corte" */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
