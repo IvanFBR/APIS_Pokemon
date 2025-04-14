@@ -1,9 +1,9 @@
 :host {
   background: url('../../assets/images/home-background.jpg') no-repeat center center fixed;
   background-size: cover;
-  height: 100vh;  /* Asegúrate de que ocupe toda la altura de la pantalla */
-  width: 100%;    /* Asegúrate de que ocupe todo el ancho */
-  display: block; /* Para evitar que el contenido se "corte" */
+  height: 100vh;  
+  width: 100%;    
+  display: block; 
 }
 
 body {
@@ -72,7 +72,6 @@ body {
     transition: all 0.3s ease;
   }
   
-  /* Efecto al pasar el mouse sobre la imagen */
   .btn-pokemon:hover .pokeball-btn {
     transform: rotate(360deg); 
   }
