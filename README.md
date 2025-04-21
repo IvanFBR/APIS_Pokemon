@@ -33,6 +33,8 @@ Within this component, there is also a button that redirects the user back to th
 
 ![image](https://github.com/user-attachments/assets/a39ad4a9-a1f3-49eb-8ec8-c06653700170)
 
+______
+
 ### ⚠️₊˚✩ NOTES
 
 This project was built with Angular, so don't forget to run: 
