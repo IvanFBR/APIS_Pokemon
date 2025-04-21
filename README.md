@@ -2,31 +2,36 @@
 
 ### 📚₊˚✩ Description
  ___
-In this project, we proudly present my very own Pokémon web page!
-You'll be able to browse Pokémon by their official number, view their name, and if you're curious explore detailed information about each one!
+In this project, I proudly present my very own Pokémon-themed web page!
+You can browse Pokémon by their official number, view their names, and—if you're curious—explore detailed information about each one. All components are fully responsive, so feel free to navigate the site from any device you prefer!
  
 ### 🌱₊˚✩ Explication
 ____
 #### 🏠 *·.༄࿔ Home Screen*
 
-The project begins with the creation of a home component. In the HTML section of this component, a welcoming interface is designed featuring the Pokémon logo, a Pikachu-themed background, and a button. When clicked, this button navigates the user to the lista-pokemones (Pokémon list) component.
+The project begins with the creation of a home component. In the HTML section of this component, a welcoming interface is designed featuring the Pokémon logo, a background inspired by the Pokémon Black and White games, and a button. When clicked, this button navigates the user to the lista-pokemones (Pokémon list) component.
 
-![image](https://github.com/user-attachments/assets/d313ccfe-3f87-40b8-ae58-8b2d8a2eba75)
+![image](https://github.com/user-attachments/assets/8b0cc6a8-6677-4308-9283-75c9fa9fb0c7)
 
 #### 📙*·.༄࿔ Pokemon list*
 
-In this list component, the same background is maintained, but instead of the welcome screen, a page filled with Pokémon cards is displayed. These cards are built using Bootstrap, and each includes a Pokémon image (sourced from a game) along with the corresponding name. At the bottom of the page, there are two navigation buttons: "Previous" and "Next". These buttons allow users to move through the pages. Clicking "Next" loads the next 20 Pokémon from the API, updating their names and images, while "Previous" goes back to the previous 20 Pokémon.
+In this list component, the background has been updated to feature a view inspired by the Pokémon games. Instead of the welcome screen, the page displays a grid of Pokémon sprites. When you hover over a sprite, a subtle animation is triggered, causing the sprite to slightly lift. Clicking on a Pokémon sprite will navigate the user to the detalle-pokemon component, where detailed information about that Pokémon is displayed.
 
-Between these two buttons, a dynamic text display shows the current page number. As users navigate forward or backward, the counter updates accordingly and also displays the total number of available pages. Lastly, there's a button that redirects the user back to the home component, where the welcome screen is shown again, along with background Pokémon music.
+At the bottom of the page, two arrow buttons are provided for navigation. When clicked, these arrows trigger a smooth animation within the box, updating the displayed content. The text "Box 1" (used as an example) is dynamically updated to reflect the current page in a pagination style. Each time an arrow button is clicked, the box number changes, and 31 Pokémon images are loaded from the API.
 
-![image](https://github.com/user-attachments/assets/dae077aa-eb15-4ca5-827a-38a4a6e1cea7)
+A button is also included to redirect the user back to the home component, where the welcome screen is shown again, along with background Pokémon music.
+
+![image](https://github.com/user-attachments/assets/705152e9-84c6-4bbb-88be-e3417664952b)
+![image](https://github.com/user-attachments/assets/6370d036-2b81-4b97-af92-4aa187b62f07)
 
 
 #### ✏️*·.༄࿔ Pokémon details*
 
-When a user clicks on any Pokémon card, they are directed to the detalle-pokemon (Pokémon detail) component. This component displays a well-organized table (styled with Bootstrap) that presents detailed information about the selected Pokémon, such as its name, type(s), stats, moves, and an animated image using animate.css. Within this component, there is also a button that redirects back to the Pokémon list. The page number from which the Pokémon was selected is preserved, so the user returns to the same page they were on.
+When a user clicks on any Pokémon image, they are directed to the detalle-pokemon (Pokémon detail) component. This component presents a well-organized interface inspired by the Pokémon games, displaying detailed information about the selected Pokémon, such as its name, type(s), stats, moves, and more. The design uses the iconic Pokémon font, enhancing the theme. Additionally, the Pokémon's image, stats, and moves are animated, providing a dynamic and engaging experience.
 
-![image](https://github.com/user-attachments/assets/cff6be1c-d96b-4326-a543-0da01157b899)
+Within this component, there is also a button that redirects the user back to the Pokémon list. The page number from which the Pokémon was selected is preserved, so the user returns to the same page they were on.
+
+![image](https://github.com/user-attachments/assets/a39ad4a9-a1f3-49eb-8ec8-c06653700170)
 
 ### ⚠️₊˚✩ NOTES
 
