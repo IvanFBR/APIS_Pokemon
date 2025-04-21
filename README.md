@@ -3,7 +3,7 @@
 ### 📚₊˚✩ Description
  ___
 In this project, I proudly present my very own Pokémon-themed web page!
-You can browse Pokémon by their official number, view their names, and—if you're curious—explore detailed information about each one. All components are fully responsive, so feel free to navigate the site from any device you prefer!
+You can browse Pokémon by their official number, view their names, and if you're curious, explore detailed information about each one. All components are fully responsive, so feel free to navigate the site from any device you prefer!
  
 ### 🌱₊˚✩ Explication
 ____
